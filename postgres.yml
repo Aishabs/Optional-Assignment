@@ -14,13 +14,13 @@ spec:
       labels:
         app: postgres
     spec:
-      containers:
-        - image: postgres
-          name: postgres
       volumes:
         - name: postgres-pv-claim
           persistentVolumeClaim:
             claimName: postgres-pv-claim
+      containers:
+        - image: postgres
+          name: postgres
           env:
           - name: POSTGRES_USER
             value: "postgres"
