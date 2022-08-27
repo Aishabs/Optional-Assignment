@@ -14,7 +14,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: result-app-service
+                name: result-service
                 port:
                   number: 80
     - host: vote.votingapp.com
@@ -24,6 +24,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: voting-app-service
+                name: vote-service
                 port:
                   number: 80S
